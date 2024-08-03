@@ -1,27 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-body {
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* there is something off with the padding (which needs to be fixed anyways) but its making it so that when you click a project the header is off by a little bit */
+/* im thinking of doing a grid with images and one or two text blobs or having structured layout with a collage of images... */
+/* and now that im looking at it on my laptop - transfer the pixels to page layout sizing because its way off on my laptop vs desktop */
 
 header {
     position: fixed;
     background-color: #333;
     color: #fff;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* to make sure you can still access the header, im not sure if i still need this */
 }
 
 header .container {
     width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -53,22 +48,47 @@ header nav ul li a:hover {
     color: #ff6347; 
 }
 
-.container {
-    width: 100%;
-    margin: 0px auto;
-    max-width: 1200px;
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
 }
 
-.container2profilephoto {
-    margin-top: 100px; <--! makes it so that theres space at the top for pfp-->
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
 }
 
 section {
     text-align: center;
-    padding: 40px 0;
+    padding: 25px;
 }
 
 section h2 {
@@ -84,47 +104,103 @@ section p {
     line-height: 1.6;
 }
 
-.profileimg {
-    border-radius: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 5px solid #ccc; 
+footer {
+    text-align: center;
+    padding: 25px;
 }
 
-.project img {
-    display: block; 
-    border-radius: 8px; 
-    margin-top: 8px;
-    vertical-align: middle;
+footer p {
+  margin: 0;
+  font-size: .75em;
+  text-align: center;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.column {
-  flex: 25%;
-  padding: 0 25px;
-}
-
-.projectborder {
+.aborder {
     background-color: #fff;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: middle;
     border: 5px solid #ccc; 
+    width: 985px;
 }
 
-.project h3 {
+.cborder {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: middle;
+    border: 5px solid #ccc; 
+    width: 985/4px; /* this needs to be changed everything that is a specific height and width needs to be fixed and PX needs to be fixed to industry standard */
+}
+
+.container {
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+.container2profilephoto {
+    margin-top: 100px; /* makes it so that theres space at the top for pfp */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact p {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.profileimg {
+    border-radius: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 5px solid #ccc; 
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding-top: 75px;
+}
+
+.project-item {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.project-item img {
+    display: block; 
+    border-radius: 8px; 
+    margin-top: 8px;
+    vertical-align: middle;
+    max-width: 512px;
+}
+
+.project-item h3 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.5em;
+    text-align: left;
+}
+
+.project-item p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    text-align: left;
+}
+
+.project-details-container {
+    padding-top: 100px;
 }
 
 .project-details {
     background-color: #fff;
-    padding: 40px;
+    padding: 25px;
     margin-top: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -146,42 +222,4 @@ section p {
 .project-link {
     text-decoration: none; 
     color: inherit;
-}
-
-.contact p {
-    margin-top: 8px;
-    vertical-align: middle;
-}
-
-.pborder {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: middle;
-    border: 5px solid #ccc; 
-    width: 985px;
-}
-
-.cborder {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: middle;
-    border: 5px solid #ccc; 
-    width: 80%;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    width: 100%;
-    text-align: center; 
-    padding: 0 10px;
-}
-
-footer p {
-    margin: 0 auto;
-    font-size: 0.9em;
 }
