@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-/* there is something off with the padding (which needs to be fixed anyways) but its making it so that when you click a project the header is off by a little bit */
-/* im thinking of doing a grid with images and one or two text blobs or having structured layout with a collage of images... */
-/* and now that im looking at it on my laptop - transfer the pixels to page layout sizing because its way off on my laptop vs desktop */
+/* there is something off with the padding still, plus the project and profile image layout is not finished */
 
 header {
     position: fixed;
     background-color: #333;
     color: #fff;
     width: 100%;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1; /* to make sure you can still access the header, im not sure if i still need this */
+    padding: 1.25em; /* 20px */
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 header .container {
-    width: 80%;
-    max-width: 1200px;
+    max-width: 75em; /* 1200px */
+    width: 80%; 
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -35,7 +33,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 20px;
+    margin-left: 1.25em; /* 20px */
 }
 
 header nav ul li a {
@@ -48,10 +46,16 @@ header nav ul li a:hover {
     color: #ff6347; 
 }
 
-body {
-    font-family: 'Raleway', sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     display: flex;
@@ -88,138 +92,157 @@ body {
 
 section {
     text-align: center;
-    padding: 25px;
+    padding: 1.5625em; /* 25px */
+    width: 90%; 
 }
 
 section h2 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em; /* 20px */
     font-size: 2em;
     color: #333;
 }
 
 section p {
-    margin-bottom: 20px;
+    margin-bottom: 1.25em; /* 20px */
     font-size: 1.1em;
     line-height: 1.6;
 }
 
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 1.5625em; /* 25px */
+    width: 100%;
 }
 
 footer p {
-  margin: 0;
-  font-size: .75em;
-  text-align: center;
+    margin: 0;
+    font-size: 0.75em;
+    text-align: center;
 }
 
-.aborder {
+.aborder, .cborder {
     background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: middle;
-    border: 5px solid #ccc; 
-    width: 985px;
+    padding: 1.5625em; /* 25px */
+    border-radius: 0.5em; /* 8px */
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    border: 0.3125em solid #ccc; /* 5px */
+    width: 80%; 
+    margin: 1em auto; 
 }
 
 .cborder {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: middle;
-    border: 5px solid #ccc; 
-    width: 985/4px; /* this needs to be changed everything that is a specific height and width needs to be fixed and PX needs to be fixed to industry standard */
+    max-width: 15.625em; /* 246.25px */
 }
 
 .container {
     width: 100%;
-    margin: 0px auto;
-    max-width: 1200px;
+    margin: 0 auto;
+    max-width: 75em; /* 1200px */
 }
 
 .container2profilephoto {
-    margin-top: 100px; /* makes it so that theres space at the top for pfp */
+    margin-top: 6.25em; /* 100px */
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .contact p {
-    margin-top: 8px;
+    margin-top: 0.5em; /* 8px */
     vertical-align: middle;
 }
 
 .profileimg {
-    border-radius: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 5px solid #ccc; 
+    border-radius: 50%;
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); 
+    border: 0.3125em solid #ccc; /* 5px */
 }
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    padding-top: 75px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 3.125em; /* 50px */
+    padding-top: 6.25em; /* 75px */
+    width: 90%; 
+    max-width: 75em; /* 1200px */
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) { /* medium screens 2 column */
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) { /* smallest screens 1 column */
+    .project-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-item {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-item img {
-    display: block; 
-    border-radius: 8px; 
-    margin-top: 8px;
+    display: block;
+    border-radius: 0.5em; /* 8px */
+    margin-top: 0.5em; /* 8px */
     vertical-align: middle;
-    max-width: 512px;
+    width: 100%;
+    max-width: 32em; /* 512px */
 }
 
 .project-item h3 {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em; /* 10px */
     font-size: 1.5em;
-    text-align: left;
+    text-align: center; 
 }
 
 .project-item p {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em; /* 10px */
     font-size: 1em;
-    text-align: left;
+    text-align: center; 
 }
 
 .project-details-container {
-    padding-top: 100px;
+    padding-top: 6.25em; /* 100px */
+    width: 25%; 
+    max-width: 75em; /* 1200px */
+    margin: 0 auto; 
 }
 
 .project-details {
     background-color: #fff;
-    padding: 25px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5625em; /* 25px */
+    margin-top: 1.25em; /* 20px */
+    border-radius: 0.5em; /* 8px */
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); 
+    width: 100%;
 }
 
 .project-details h2 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em; /* 20px */
     font-size: 2em;
     color: #333;
 }
 
 .project-details p {
-    margin-bottom: 20px;
+    margin-bottom: 1.25em; /* 20px */
     font-size: 1.1em;
     line-height: 1.6;
 }
 
 .project-link {
-    text-decoration: none; 
+    text-decoration: none;
     color: inherit;
 }
