@@ -3,4 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('project-detailsfade').classList.add('fade-in');
     document.getElementById('footerproject-details').classList.remove('fade-out');
     document.getElementById('footerproject-details').classList.add('fade-in');
+    document.getElementById('project-infofade').classList.remove('fade-out');
+    document.getElementById('project-infofade').classList.add('fade-in');
 });

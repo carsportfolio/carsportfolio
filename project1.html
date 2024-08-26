@@ -23,7 +23,11 @@
     </header>
 
 <div class="main-container">
-    <div class="fixed-box-left">
+            <button class="fixed-bottom-left"> <<< </button> 
+            <button class="fixed-bottom-right"> >>> </button>
+
+    <div class="fixed-box-left button-before" id="project-infofade">
+        <button id="X-button" class="button-before X-button-class"> X </button>
         <h2>Project 1</h2>
         <p>project info</p>
         <br>
@@ -55,16 +59,12 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="600" height="256">
             </div>
             <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256">
-            </div>
-            <div class="project-details">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="356" height="500">
             </div>
             <div class="project-details">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="600" height="256">
             </div>
         </div>
-            <button class="fixed-box-right"> >>> </button>
     </div>
     </section>
 </div>
@@ -77,12 +77,13 @@
 </footer>
 
 <script src="back-button.js"></script>
-<script src="sort-show-projects.js"></script>
+<script src="x-out-project.js"></script>
+<script src="next-project-arrow-right.js"></script>
+<script src="next-project-arrow-left.js"></script>
+<script src="sort-show-projects.js"></script> <!-- randomize project images, looks kind of cool in a collage -->
 <script src="fade-in-project-details.js"></script>
 <script src="fade-out-project-details.js"></script>
-<script src="fade-in-project-detail-to-project.js"></script>
 <script src="fade-out-project-detail-to-project.js"></script>
-<script src="fade-in-project-to-about.js"></script>
 <script src="fade-out-project-to-about.js"></script>
 </body>
 </html>
