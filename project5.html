@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5</title>
+    <title>1</title>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,68 +22,53 @@
         </div>
     </header>
 
-<div class="main-container">
-            <button class="fixed-bottom-left"> <<< </button> 
-            <button class="fixed-bottom-right"> >>> </button>
-
-    <div class="fixed-box-left button-before" id="project-infofade">
-        <button id="X-button" class="button-before X-button-class"> X </button>
-        <h2>Project 5</h2>
-        <p>project info</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+<div class="project-container-test">
+    <button class="fixed-bottom-left"> <<< </button> 
+    <button class="fixed-bottom-right"> >>> </button>
+    <div class="project-text" id="project-infofade">
+        <h2>Project Title</h2>
+        <p>
+            This is a brief description of the project. You can provide an overview, key features, technologies used, and any other relevant information about the project.
+        </p>
         <button id="backButton">Return</button>
     </div>
-    <section id="project-detailsfade">
-        <div class="project-details-container">
-            <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256">
+
+    <div class="project-carousel" id="project-detailsfade">
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                </div>
             </div>
-            <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="356" height="500">
+            <div class="dot-container">
             </div>
-            <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="600" height="256">
-            </div>
-            <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256">
-            </div>
-            <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="356" height="500">
-            </div>
-            <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="600" height="256">
-            </div>
-            <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="356" height="500">
-            </div>
-            <div class="project-details">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="600" height="256">
-            </div>
+            <button class="carousel-button prev-button">‹</button>
+            <button class="carousel-button next-button">›</button>
         </div>
     </div>
-    </section>
 </div>
 
 <footer>
     <div class="container" id="footerproject-details">
-        <p>&copy; 2024 . </p>
+        <p>&copy; 2024 Carson Holub. </p>
         <p>All rights reserved.</p>
     </div>
 </footer>
 
 <script src="back-button.js"></script>
-<script src="x-out-project.js"></script>
 <script src="next-project-arrow-right.js"></script>
 <script src="next-project-arrow-left.js"></script>
-<script src="sort-show-projects.js"></script> <!-- randomize project images, looks kind of cool in a collage -->
 <script src="fade-in-project-details.js"></script>
 <script src="fade-out-project-details.js"></script>
 <script src="fade-out-project-detail-to-project.js"></script>
 <script src="fade-out-project-to-about.js"></script>
+<script src="enlarge-project-img.js"></script>
+<script src="carousel.js"></script>
 </body>
 </html>

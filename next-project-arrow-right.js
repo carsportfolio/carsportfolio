@@ -1,27 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var projectLink = document.querySelector('.fixed-bottom-right');
+    var projectLinkRight = document.querySelector('.fixed-bottom-right');
 
-    if (projectLink) {
-        projectLink.addEventListener('click', function() {
-            console.log('Button clicked');
-
+    if (projectLinkRight) {
+        projectLinkRight.addEventListener('click', function() {
             var jumbledProjects = JSON.parse(sessionStorage.getItem('jumbledProjects'));
-            console.log('Jumbled Projects:', jumbledProjects);
-
             var currentProject = window.location.pathname.split('/').pop();
-            console.log('Current Project:', currentProject);
-
             var currentIndex = jumbledProjects.indexOf(currentProject);
+
             if (currentIndex === -1) {
                 console.error('Current project not found in jumbledProjects');
                 return;
             }
+
             var nextIndex = (currentIndex + 1) % jumbledProjects.length;
             var nextProject = jumbledProjects[nextIndex];
 
-            window.location.href = nextProject;
+            // Fade out the current project
+            document.getElementById('project-detailsfade').classList.remove('fade-in');
+            document.getElementById('project-detailsfade').classList.add('fade-out');
+            document.getElementById('footerproject-details').classList.remove('fade-in');
+            document.getElementById('footerproject-details').classList.add('fade-out');
+            document.getElementById('project-infofade').classList.remove('fade-in');
+            document.getElementById('project-infofade').classList.add('fade-out');
+
+            setTimeout(function() {
+                // Navigate to the next project after fade-out
+                window.location.href = nextProject;
+            }, 500);
         });
-    } else {
-        console.log('didnt click button - right'); 
     }
+
+    // Fade in the new project on page load
+    document.getElementById('project-detailsfade').classList.remove('fade-out');
+    document.getElementById('project-detailsfade').classList.add('fade-in');
+    document.getElementById('footerproject-details').classList.remove('fade-out');
+    document.getElementById('footerproject-details').classList.add('fade-in');
+    document.getElementById('project-infofade').classList.remove('fade-out');
+    document.getElementById('project-infofade').classList.add('fade-in');
 });

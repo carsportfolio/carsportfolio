@@ -24,35 +24,40 @@
 <body>
     <section id="about">
         <div class="container2profilephoto">
-            <img class="profileimg expand" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg"  width="256" height="256">
+            <img class="profileimg expand" rel="preload" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg"  width="256" height="256">
         </div>
         <div class="container aboutbody">
-            <div class="aborder"> 
-                <br>
-                <br>
-                <br>
-                <h2>Hi, I'm Carson!</h2>
-                <p class="body"> info go here </p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div> 
+            <div class="aborder" id="scrollableBox"> 
+                <h2 id="aborder-header"> Hi, I'm Carson! </h2>
+                <div class="scrolling-content">
+                    <p class="body paragraph"> &nbsp; &nbsp; I am a recent Creative Technology and Design graduate with a Bachelor of Science from the Engineering Department at the University of Colorado Boulder. My academic journey at CU has equipped me with an imaginative understanding of technology and a drive to innovate. I currently specialize in game design and development using Unity and C#/C++ to create interactive games and experiences. 
+                    </p>
+                    <br>
+                    <br>
+                    <p class="body paragraph"> &nbsp; &nbsp; I have also learned many different ways to express my art in the physical and technological mediums through the education of the ATLAS Department, Art Department, as well as my own personal exploration. I have polished my skills in multiple different design topics, 3D object model creation and printing, web development, game development (using Unity & Swift), 2D & 3D art, many programs including Adobe, Microsoft, and Google Products, and a few programming languages which most notably include C++ and C# but are not limited to. </p> 
+                    <br>
+                    <br>
+                    <p class="body paragraph"> &nbsp; &nbsp; My portfolio demonstrates my ability to blend technical skills with artistic vision. My diverse skill set allows me to adapt in various professional environments, making me a flexible creative asset for any project. I'd love to discuss how my background and passions could align with your needs. Contact me through LinkedIn or email. </p>
+                    </p>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div> 
+            </div>
         </div>
     </section>
 
 <footer>
     <div class="container" id="footer">
-      <p>&copy; 2024 CH. </p>
+      <p>&copy; 2024 Carson Holub. </p>
       <p>All rights reserved.</p>
     </div>
   </footer>
    <script src="fade-in-about.js"></script>
    <script src="fade-out-about.js"></script>
+   <script src="about-paragraph-slide.js"></script>
+   <script src="scroll-indication.js"></script>
 </body>
 </html>
