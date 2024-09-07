@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1</title>
+    <title>CH: Singing Cylinders</title>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,27 +26,73 @@
     <button class="fixed-bottom-left"> <<< </button> 
     <button class="fixed-bottom-right"> >>> </button>
     <div class="project-text" id="project-infofade">
-        <h2>Project Title</h2>
-        <p>
-            This is a brief description of the project. You can provide an overview, key features, technologies used, and any other relevant information about the project.
-        </p>
-        <button id="backButton">Return</button>
+        <div class="title-txt">Singing Cylinders</div>
+        <br>
+        <div class="scrolling-content-project">
+            <div class="paragraph-project pborder">
+                <h2>Role: </h2>
+                <p>
+                    Lead Object Designer, 3D Modeler, and Renderer      
+                </p>
+                <h2>Date: </h2>
+                <p>
+                    March 2022 
+                </p>
+                <h2>Context: </h2>
+                <p>
+                    University of Colorado Boulder
+                </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="paragraph-project pborder">
+                <h2>Description: </h2>
+                <p>
+                    &nbsp;&nbsp;<i>"Singing Cylinders"</i> is an interactive sculpture installation inspired by Paul Matisse’s <i><a href="https://www.paulmatisse.com/the-musical-fence" target="_blank" rel="noopener noreferrer">"The Musical Fence"</a></i>. This project highlights both the artistic and technical aspects of user interaction, while showcasing my ability to create accurate, true-to-scale renderings. The installation was sculpted using <b>AutoDesk Fusion</b> and 3D rendered in <b>Adobe Dimension</b> and was a project for one of my core classes.
+                </p>
+                <p>
+                    Original post with work-in-progress images posted <i><a href="https://carsonholubwip.wordpress.com/2022/03/17/assignment-installation/" target="_blank" rel="noopener noreferrer">here</a></i>.
+                </p>
+            </div>
+        </div>
     </div>
+        <div class="scroll-indicator-project">
+            <div class="dot-project active"></div>
+            <div class="dot-project"></div>
+        </div> 
 
     <div class="project-carousel" id="project-detailsfade">
         <div class="carousel">
-            <div class="carousel-track">
+            <div class="carousel-track">                
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                    <img src="images/singing_cylinders/singing_cylinders_final_render.JPG" rel="preload" alt="" class="zoomable" id="zoomableImage">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                    <img src="images/singing_cylinders/singing_cylinders_1.PNG" rel="preload" alt="" class="zoomable" id="zoomableImage">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                    <img src="images/singing_cylinders/singing_cylinders_2.PNG" rel="preload" alt="" class="zoomable" id="zoomableImage">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/singing_cylinders/singing_cylinders_3.PNG" rel="preload" alt="" class="zoomable" id="zoomableImage">
                 </div>
             </div>
             <div class="dot-container">
+              <!-- dots appear here -->
             </div>
             <button class="carousel-button prev-button">‹</button>
             <button class="carousel-button next-button">›</button>
@@ -70,5 +116,6 @@
 <script src="fade-out-project-to-about.js"></script>
 <script src="enlarge-project-img.js"></script>
 <script src="carousel.js"></script>
+<script src="project-swipe.js"></script>
 </body>
 </html>

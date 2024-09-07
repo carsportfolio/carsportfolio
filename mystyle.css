@@ -115,6 +115,10 @@ h1 {
     transition: opacity 0.3s ease;
 }
 
+a { /* paul's link */
+    text-decoration: none;
+}
+
 .aborder, .cborder {
     cursor: default;
     display: flex;
@@ -139,6 +143,17 @@ h1 {
 
 .aborder h2 {
     position: fixed;
+}
+
+.aborder:hover {
+    cursor: pointer;
+}
+
+.pborder {
+    background-color: #fff;
+    border: 0.3125em solid #ccc;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
@@ -246,7 +261,7 @@ h1 {
 .title-txt {
     position: sticky;
     padding-top: 6em;
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: bold;
     color: #333;
     text-align: center;
@@ -257,26 +272,25 @@ h1 {
 
 .project-text {
     height: 80vh;
-    overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2em;
+    padding: 4em;
     box-sizing: border-box;
 }
 
 .project-text p {
     font-size: 1.25em;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     padding: 0;
 }
 
 .project-text h2 {
-    margin-top: 1em;
-    margin-bottom: .45em;
+    margin-top: 0em;
+    margin-bottom: .25em;
     padding: 0;
 }
 
@@ -374,6 +388,7 @@ h1 {
 
 .carousel-slide img {
     max-width: 100%;
+    width: 35em;
     height: auto;
     display: block;
     border-radius: 10px;
@@ -387,7 +402,6 @@ h1 {
     cursor: pointer;
     padding: 1em;
     border-radius: 0.5em;
-    cursor: pointer;
     padding:;
     background: #333;
     opacity: 1;
@@ -469,7 +483,6 @@ h1 {
 }
 
 .project-details img {
-    cursor: zoom-in;
     max-width: 100%;
     height: auto;
     background-color: #fff;
@@ -507,7 +520,7 @@ h1 {
     position: relative;
 }
 
-.carousel-track img:hover {
+.carousel-slide img:hover {
     transform: scale(1.025);
     cursor: zoom-in;
 }
@@ -576,6 +589,7 @@ h1 {
     max-width: 90%;
     max-height: 90%;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    padding-top: 16.55em;
 }
 
 .modal-close {
@@ -692,19 +706,29 @@ h1 {
 }
 
 .fixed-bottom-right {
-    z-index: 3;
+    z-index: 1;
     position: fixed;
     bottom: 0;
     right: 1.0em;
     transform: translate(0%, -50%);
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 0.5em;
+    background: #333;
 }
 
 .fixed-bottom-left {
-    z-index: 3;
+    z-index: 1;
     position: fixed;
     bottom: 0;
     left: 1.0em;
     transform: translate(0%, -50%);
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 0.5em;
+    background: #333;
 }
 
 .scrolling-content {
@@ -725,6 +749,10 @@ h1 {
     box-sizing: border-box;
     text-align: justify;
     margin: 0;
+}
+
+.paragraph-project:hover {
+    cursor: pointer;
 }
 
 /* -------------------------------------------------------- keyframe animations */

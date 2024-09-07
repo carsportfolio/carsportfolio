@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1</title>
+    <title>CH: Purrfect Pair</title>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,27 +26,82 @@
     <button class="fixed-bottom-left"> <<< </button> 
     <button class="fixed-bottom-right"> >>> </button>
     <div class="project-text" id="project-infofade">
-        <h2>Project Title</h2>
-        <p>
-            This is a brief description of the project. You can provide an overview, key features, technologies used, and any other relevant information about the project.
-        </p>
-        <button id="backButton">Return</button>
+        <div class="title-txt">Purrfect Pair</div>
+        <br>
+        <div class="scrolling-content-project">
+            <div class="paragraph-project pborder">
+                <h2>Role: </h2>
+                <p>
+                    Lead Game Designer and Developer 
+                </p>
+                <h2>Date: </h2>
+                <p>
+                    December 2023 
+                </p>
+                <h2>Context: </h2>
+                <p>
+                    University of Colorado Boulder
+                </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="paragraph-project pborder">
+                <h2>Description: </h2>
+                <p>
+                    &nbsp;&nbsp;<i>"Purrfect Pair"</i> is a cat-themed game app combination, featuring two simple games—a yarn-collecting game and a matching game—within one app. It also tracks and displays the user’s high scores after each play. The primary goal of this project was to introduce myself to <i>game development</i> for Apple devices, using <b>Swift</b> (more specifically, SpriteKit).
+                </p>
+                <p>
+                    This game does have a code base you can reference on <i><a href="https://github.com/carcyy/FinalProjectGame" target="_blank" rel="noopener noreferrer">GitHub</a></i>.
+                </p>
+            </div>
+        </div>
     </div>
+        <div class="scroll-indicator-project">
+            <div class="dot-project active"></div>
+            <div class="dot-project"></div>
+        </div> 
 
-    <div class="project-carousel" id="project-detailsfade">
+<div class="project-carousel" id="project-detailsfade">
         <div class="carousel">
-            <div class="carousel-track">
+            <div class="carousel-track" style="width:200px; height:315px">  <!-- this surprisingly works for now -->
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                    <iframe src="https://player.vimeo.com/video/1007145812" rel="preload" height= "140%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>              
+                <div class="carousel-slide">
+                    <img src="images/purrfect_pair/pp_home_screen.JFIF" rel="preload" height= "100%" frameborder="0" class="zoomable" id="zoomableImage">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                    <img src="images/purrfect_pair/pp_1_start.JFIF" rel="preload" height= "100%" frameborder="0" class="zoomable" id="zoomableImage">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                    <img src="images/purrfect_pair/pp_1_started.JFIF" rel="preload" height= "100%" frameborder="0" class="zoomable" id="zoomableImage">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/purrfect_pair/pp_2_start.JFIF" rel="preload" height= "100%" frameborder="0" class="zoomable" id="zoomableImage">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/purrfect_pair/pp_2_started.JFIF" rel="preload" height= "100%" frameborder="0" class="zoomable" id="zoomableImage">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/purrfect_pair/pp_highscores.JFIF" rel="preload" height= "100%" frameborder="0" class="zoomable" id="zoomableImage">
                 </div>
             </div>
             <div class="dot-container">
+              <!-- dots appear here -->
             </div>
             <button class="carousel-button prev-button">‹</button>
             <button class="carousel-button next-button">›</button>
@@ -70,5 +125,6 @@
 <script src="fade-out-project-to-about.js"></script>
 <script src="enlarge-project-img.js"></script>
 <script src="carousel.js"></script>
+<script src="project-swipe.js"></script>
 </body>
 </html>

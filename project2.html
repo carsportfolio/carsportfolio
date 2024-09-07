@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1</title>
+    <title>CH: Portfolio Website</title>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,27 +26,73 @@
     <button class="fixed-bottom-left"> <<< </button> 
     <button class="fixed-bottom-right"> >>> </button>
     <div class="project-text" id="project-infofade">
-        <h2>Project Title</h2>
-        <p>
-            This is a brief description of the project. You can provide an overview, key features, technologies used, and any other relevant information about the project.
-        </p>
-        <button id="backButton">Return</button>
+        <div class="title-txt">Portfolio Website</div>
+        <br>
+        <div class="scrolling-content-project">
+            <div class="paragraph-project pborder">
+                <h2>Role: </h2>
+                <p>
+                    Lead Web Designer and Developer 
+                </p>
+                <h2>Date: </h2>
+                <p>
+                    September 2024 
+                </p>
+                <h2>Context: </h2>
+                <p>
+                    Personal Project
+                </p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="paragraph-project pborder">
+                <h2>Description: </h2>
+                <p>
+                    &nbsp;&nbsp;The portfolio website not only highlights my proficiency with core web technologies but also provides a platform for me to use to display past projects to potential employers or clients. The primary goal was to solidify my understanding of basic web development concepts before progressing to more advanced frameworks like React. This website was made using <b>HTML/CSS</b> and <b>JavaScript</b>.
+                </p>
+                <p>
+                    Hosted and posted on <i><a href="https://github.com/carsportfolio/carsportfolio.github.io" target="_blank" rel="noopener noreferrer">GitHub</a></i> (through GitHub Pages). 
+                </p>
+            </div>
+        </div>
     </div>
+        <div class="scroll-indicator-project">
+            <div class="dot-project active"></div>
+            <div class="dot-project"></div>
+        </div> 
 
     <div class="project-carousel" id="project-detailsfade">
         <div class="carousel">
-            <div class="carousel-track">
+            <div class="carousel-track">                
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                    <img src="images/web_portfolio/web_homepage.PNG" alt="" class="zoomable" id="zoomableImage">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
+                    <img src="images/web_portfolio/web_1.PNG" alt="" class="zoomable" id="zoomableImage">
                 </div>
                 <div class="carousel-slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg" alt="testimg" width="456" height="256" class="zoomable" id="zoomableImage">
-                </div>
+                    <img src="images/web_portfolio/web_zoom_in.PNG" alt="" class="zoomable" id="zoomableImage">
+                </div>   
+                <div class="carousel-slide">
+                    <img src="images/web_portfolio/web_about.PNG" alt="" class="zoomable" id="zoomableImage">
+                </div>              
             </div>
             <div class="dot-container">
+              <!-- dots appear here -->
             </div>
             <button class="carousel-button prev-button">‹</button>
             <button class="carousel-button next-button">›</button>
@@ -70,5 +116,6 @@
 <script src="fade-out-project-to-about.js"></script>
 <script src="enlarge-project-img.js"></script>
 <script src="carousel.js"></script>
+<script src="project-swipe.js"></script>
 </body>
 </html>
