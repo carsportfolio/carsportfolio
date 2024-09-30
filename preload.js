@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     preloadPageUsingIframe('project3.html');
     preloadPageUsingIframe('project4.html');
     preloadPageUsingIframe('project5.html');
+    preloadPageUsingIframe('project6.html');
+    preloadPageUsingIframe('project7.html');
+    preloadPageUsingIframe('project8.html');
     preloadPageUsingIframe('about.html');
 });
 
